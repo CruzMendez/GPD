@@ -1,25 +1,25 @@
-_GetAPI = (url, build_page_details)=>{
-  REQ = (type, url, callback)=>{
-    var xhr = new XMLHttpRequest();
-    xhr.open(type, url, true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4) {
-        if (callback) callback(JSON.parse(xhr.responseText))
-      }
+const allPlanetsUri = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_hostname,ra,dec&order=dec&format=JSON'
+const planetUri = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&format=json&where=pl_name%20like'
+
+_GET = (uri, callback)=>{
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', uri, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      if (callback) callback(JSON.parse(xhr.responseText))
     }
-    xhr.send(null)
   }
-  REQ('GET', url, (data)=>{
-    if ( build_page_details ) {
-      _page_table(data)
-    } else {
-      console.log(data)
-    }
+  xhr.send(null)
+}
+
+_GET(allPlanetsUri, (data)=>{
+  _page_table(data)
+})
+
+_getDetails = (name)=>{
+  const encodedName = encodeURI(" '"+name+" b'")
+  _GET(planetUri+encodedName, (data)=>{
+    _page_details(data)
+    page("page_details")
   })
 }
-
-_getDetails = (dUrl)=>{
-  _GetAPI(dUrl, false)
-}
-
-_GetAPI('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_hostname,ra,dec&order=dec&format=JSON', true)
