@@ -22,4 +22,6 @@ _getDetails = (name)=>{
     _page_details(data)
     page("page_details")
   })
+
 }
+// something...
