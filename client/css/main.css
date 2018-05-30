@@ -7,3 +7,9 @@ body {
 .title {
   text-align: center;
 }
+.planet-details {
+  font-size: 20px;
+  background-color: rgba(255,255,255,0.2);
+  height: 50px;
+  margin: 2px;
+}
