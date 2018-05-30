@@ -24,4 +24,3 @@ _getDetails = (name)=>{
   })
 
 }
-// something...

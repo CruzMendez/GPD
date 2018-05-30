@@ -3,23 +3,30 @@ _page_table = (data)=>{
 
   page_table.innerHTML = `
     <h3 class='title'> hello from TABLES page </h3>
-    <div>
-      Something Else...
-    </div>
   `
 
   for (var i = 0; i < data.length; i++) {
-    let span = document.createElement('span')
-    span.innerHTML += `
-      <span>
-        | <button onClick="_getDetails('${data[i].pl_hostname}')">
-          ${data[i].pl_hostname} </button>
-        | ${data[i].ra}
-        | ${data[i].dec}
-      </span> <br>
+    let div = document.createElement('div')
+    div.classList.add('table-planet-field')
+    div.innerHTML += `
+      <div>
+        <div class='table-value'>
+          ${data[i].pl_hostname}
+        </div>
+        <div class='table-value'>
+          ra: ${data[i].ra}
+        </div>
+        <div class='table-value'>
+          dec: ${data[i].dec}
+        </div>
+        <button
+          class='float-right-pad10 button1'
+          onClick="_getDetails('${data[i].pl_hostname}')">
+            View Exoplanet Details
+        </button>
+      </div>
     `
-    page_table.appendChild(span)
+    page_table.appendChild(div)
   }
 
-  window.scrollTo(0,0)
 }

@@ -7,9 +7,32 @@ body {
 .title {
   text-align: center;
 }
-.planet-details {
+.details-planet-field, .table-planet-field {
   font-size: 20px;
-  background-color: rgba(255,255,255,0.2);
-  height: 50px;
-  margin: 2px;
+  background-color: rgba(255,255,255,0.3);
+  margin: auto;
+  margin-bottom: 3px;
+  padding: 5px;
+  padding-left: 10px;
+  height: 25px;
+  width: 600px;
+}
+.float-right-pad10 {
+  float: right;
+  padding-right: 10px;
+}
+.table-planet-field {
+  width: 700px;
+}
+.table-value {
+  display: inline-block;
+  width: 170px;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.button1 {
+  height: 25px;
+  padding-bottom: 0px;
 }
