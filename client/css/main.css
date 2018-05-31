@@ -34,5 +34,14 @@ body {
 }
 .button1 {
   height: 25px;
-  padding-bottom: 0px;
+  border-radius: 5px;
+  padding-bottom: 3px;
 }
+
+.button1:hover { 
+    color: white;
+    background-color: red;
+    transform: scale(1.25);
+    cursor: pointer;
+  }
+
