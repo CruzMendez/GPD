@@ -1,6 +1,10 @@
 Clive Clusterson
 Bob Main
+<<<<<<< HEAD
 Russ Savage!
 Casey OKEEFE
 Mark Hinojosa
 Kyle Rhodes
+=======
+Russ Savage!
+>>>>>>> b632784478ed31ec2397f75d21bb4d8466361a3d
