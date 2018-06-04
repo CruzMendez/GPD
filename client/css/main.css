@@ -1,12 +1,28 @@
 body {
   background-color: gray;
 }
+
+.nav {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.home_menu {
+  font-size: 1.25rem;
+  height: 40px;
+  border-radius: 5px;
+  width: 30%;
+}
+
 .float-right {
   float: right;
 }
+
 .title {
   text-align: center;
 }
+
 .details-planet-field, .table-planet-field {
   font-size: 20px;
   background-color: rgba(255,255,255,0.3);
@@ -17,13 +33,16 @@ body {
   height: 25px;
   width: 600px;
 }
+
 .float-right-pad10 {
   float: right;
   padding-right: 10px;
 }
+
 .table-planet-field {
   width: 700px;
 }
+
 .table-value {
   display: inline-block;
   width: 170px;
@@ -32,6 +51,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+
 .button1 {
   height: 25px;
   border-radius: 5px;
@@ -44,7 +64,6 @@ body {
     transform: scale(1.25);
     cursor: pointer;
   }
-
 
 .nav-buttons {
   padding: 15px;
