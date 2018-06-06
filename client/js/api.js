@@ -20,7 +20,6 @@ _getDetails = (name)=>{
   const encodedName = encodeURI(" '"+name+" b'")
   _GET(planetUri+encodedName, (data)=>{
     _page_details(data)
-    page("page_details")
+    _page("page_details")
   })
-
 }
